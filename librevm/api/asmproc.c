@@ -26,7 +26,7 @@ void	revm_proc_init()
       switch (elfsh_get_arch(world.curjob->curfile->hdr))
         {
         case EM_386:
-          world.curjob->proc = &world.proc_ia32;
+	  world.curjob->proc = &world.proc_ia32;
           break;
         case EM_SPARC:
         case EM_SPARC32PLUS:
@@ -39,6 +39,7 @@ void	revm_proc_init()
           world.curjob->proc = &world.proc_mips;
           break;
         case EM_ARM:
+	case EM_PPC:
           world.curjob->proc = &world.proc_arm;
           break;
         default:

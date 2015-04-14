@@ -254,6 +254,7 @@ int       elfsh_get_pagesize(elfshobj_t *file)
       PROFILER_ROUT(__FILE__, __FUNCTION__, __LINE__, 8192);
     case ELFSH_ARCH_PPC32:
     case ELFSH_ARCH_PPC64:
+	  PROFILER_ROUT(__FILE__, __FUNCTION__, __LINE__, 4096);
     case ELFSH_ARCH_ERROR:
     default:
       PROFILER_ERR(__FILE__, __FUNCTION__, __LINE__, 
